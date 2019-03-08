@@ -1,0 +1,9 @@
+/target/
+/test-output/
+/selenium-reports/
+/bin/
+/lib/
+/src/test/resources/localRegression.xml
+/report/
+/reportLogs/
+*.db

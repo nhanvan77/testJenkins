@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- testNG template for Parallel method, thread-count has to be same as 
+	number of methods. For instance, to run 3 methods, thread-count="3" -->
+<suite name="TestSuite" thread-count="3" verbose="0"
+	parallel="methods">
+
+	<listeners>
+		<listener class-name="com.msrobot.listeners.TestListener"></listener>
+		<listener class-name="com.msrobot.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Unit test">
+		<classes>
+			<class name="demoSites.DemoSites_UnitTests_Parallel">
+				<methods>
+					<include name="UnitTest14_languageHandler">
+					</include>
+					<include name="UnitTest08_deselectByVisibleText">
+					</include>
+					<include name="UnitTest09_deselectAll">
+					</include>
+					<include name="UnitTest11_deselectByValue">
+					</include>
+				</methods> 
+			</class>
+		</classes>
+	</test>
+</suite>
